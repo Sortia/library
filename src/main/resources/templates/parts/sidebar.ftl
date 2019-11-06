@@ -94,7 +94,7 @@
         </a>
         <div id="collapseDirectories" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/genres">Genres</a>
+                <a class="collapse-item" href="/genre">Genres</a>
                 <a class="collapse-item" href="/formats">Formats</a>
                 <a class="collapse-item" href="/types">Types</a>
                 <a class="collapse-item" href="/keywords">Keywords</a>

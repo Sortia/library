@@ -1,10 +1,10 @@
 package com.example.sweater.domain.books;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Entity
-@Table(name = "genres")
-public class Genre extends Directory {
+public class Directory {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     protected Integer id;
