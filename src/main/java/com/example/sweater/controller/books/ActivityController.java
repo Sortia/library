@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/directory/activity")
+@RequestMapping("/directory/activities")
 public class ActivityController extends DirectoryController {
 
     @Autowired
@@ -29,7 +29,7 @@ public class ActivityController extends DirectoryController {
 
     @Override
     protected String getPath() {
-        return "activity";
+        return "activities";
     }
 
     protected void update(Integer id, String name) {

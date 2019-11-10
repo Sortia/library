@@ -94,14 +94,14 @@
         </a>
         <div id="collapseDirectories" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/genre">Genres</a>
-                <a class="collapse-item" href="/formats">Formats</a>
-                <a class="collapse-item" href="/types">Types</a>
-                <a class="collapse-item" href="/keywords">Keywords</a>
-                <a class="collapse-item" href="/genres">Genres</a>
-                <a class="collapse-item" href="/publishing_houses">Publishing houses</a>
-                <a class="collapse-item" href="/authors">Authors</a>
-                <a class="collapse-item" href="/activity">Activity</a>
+                <a class="collapse-item" href="/directory/formats">Formats</a>
+                <a class="collapse-item" href="/directory/types">Types</a>
+                <a class="collapse-item" href="/directory/keywords">Keywords</a>
+                <a class="collapse-item" href="/directory/genres">Genres</a>
+                <a class="collapse-item" href="/directory/publishers">Publishers</a>
+                <a class="collapse-item" href="/directory/authors">Authors</a>
+                <a class="collapse-item" href="/directory/activities">Activities</a>
+                <a class="collapse-item" href="/directory/states">States</a>
             </div>
         </div>
     </li>

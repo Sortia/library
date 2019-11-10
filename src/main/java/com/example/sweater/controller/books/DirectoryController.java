@@ -42,6 +42,7 @@ abstract public class DirectoryController {
 
         model.addAttribute("directories", repo.findAll());
         model.addAttribute("name", name);
+        model.addAttribute("path", path);
 
         return "directories/list";
     }

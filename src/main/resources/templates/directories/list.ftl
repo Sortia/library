@@ -26,7 +26,7 @@
                     <button class="btn btn-success directory_edit" data-toggle="modal" data-target="#editModal" data-id="${directory.id}">Edit</button>
                 </td>
                 <td>
-                    <a href="/directory/genre/delete/${directory.id}" class="btn btn-danger">Delete</a>
+                    <a href="/directory/${path}/delete/${directory.id}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         </#list>
