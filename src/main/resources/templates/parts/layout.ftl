@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="/static/css/sb-admin-2.css">
+        <meta name="_csrf" content="${_csrf.token}"/>
         <link href="/static/css/all.css" rel="stylesheet" type="text/css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -24,6 +25,10 @@
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 crossorigin="anonymous"></script>
 
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/sb-admin-2.js"></script>
+        <script src="/static/js/jquery_easing.js"></script>
+
         <title>Library</title>
 
     </head>
@@ -41,20 +46,6 @@
         </div>
 
     </div>
-
-    <script src="/static/js/jquery.js"></script>
-    <script src="/static/js/sb-admin-2.js"></script>
-    <script src="/static/js/jquery_easing.js"></script>
-    <script src="/static/js/chart.js"></script>
-    <script src="/static/js/chart_area_demo.js"></script>
-    <script src="/static/js/chart_pie_demo.js"></script>
-    <!-- Latest compiled and minified CSS -->
-
-    <!-- Latest compiled and minified JavaScript -->
-<#--    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>-->
-    <!-- Latest compiled and minified Locales -->
-    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/locale/bootstrap-table-zh-CN.min.js"></script>
-
 
     </body>
     </html>
