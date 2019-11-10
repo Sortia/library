@@ -1,5 +1,5 @@
 $(() => {
-    $('.directory_edit').on('click', function() {
+    $('.directory_edit').on('click', function () {
         let id = $(this).attr('data-id');
         let name = $(`#name_${id}`).text();
         console.log(id, name);
@@ -10,7 +10,7 @@ $(() => {
 
     $('body').on('click', '#save_directory', () => {
         $.ajax({
-            url: `/directory/genre/store/${$('#id').val()}`,
+            url: location.href + `/store/${$('#id').val()}`,
             method: 'POST',
             data: {
                 _csrf: $("meta[name='_csrf']").attr("content"),

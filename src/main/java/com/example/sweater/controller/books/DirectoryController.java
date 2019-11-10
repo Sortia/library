@@ -1,4 +1,4 @@
-package com.example.sweater.controller;
+package com.example.sweater.controller.books;
 
 import com.example.sweater.domain.books.Directory;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,11 +15,15 @@ abstract public class DirectoryController {
 
     protected String path;
 
+    protected String name;
+
     protected abstract Directory getDirectory();
 
     protected abstract JpaRepository getRepository();
 
     protected abstract String getPath();
+
+    protected abstract String getName();
 
     protected abstract void create(String name);
 
@@ -29,6 +33,7 @@ abstract public class DirectoryController {
         directory = getDirectory();
         repo = getRepository();
         path = getPath();
+        name = getName();
     }
 
     @GetMapping
@@ -36,8 +41,9 @@ abstract public class DirectoryController {
         repo = getRepository();
 
         model.addAttribute("directories", repo.findAll());
+        model.addAttribute("name", name);
 
-        return "directories/" + path + "/list";
+        return "directories/list";
     }
 
     @ResponseBody
@@ -57,8 +63,7 @@ abstract public class DirectoryController {
         return "redirect:/directory/" + path;
     }
 
-    protected void updateOrCreate(Integer id, String name)
-    {
+    protected void updateOrCreate(Integer id, String name) {
         Optional directory = repo.findById(id);
 
         if (!directory.isPresent()) {

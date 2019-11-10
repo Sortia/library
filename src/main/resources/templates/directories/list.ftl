@@ -1,8 +1,10 @@
-<#import "../../parts/layout.ftl" as c>
+<#import "../parts/layout.ftl" as c>
 
 <script src="/static/js/directory.js" defer></script>
 
 <@c.page>
+
+    <h2>${name}</h2>
 
     <button class="btn btn-primary mb-3 directory_edit" data-toggle="modal" data-target="#editModal" data-id="0">Create</button>
 

@@ -3,8 +3,8 @@ package com.example.sweater.domain.books;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "genres")
-public class Genre implements Directory {
+@Table(name = "keywords")
+public class Keyword implements Directory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
