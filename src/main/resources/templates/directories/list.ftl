@@ -1,6 +1,6 @@
 <#import "../parts/layout.ftl" as c>
 
-<script src="/static/js/directory.js" defer></script>
+<script src="/static/js/directory/directory.js" defer></script>
 
 <@c.page>
 

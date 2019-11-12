@@ -1,3 +1,9 @@
-body {
-    color: #113;
+.select2 span {
+    line-height: 38px !important;
+    height: 38px !important;
+}
+
+.input-group-prepend + select.select2 + .select2 span {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
 }
