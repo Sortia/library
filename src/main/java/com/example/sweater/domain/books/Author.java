@@ -33,11 +33,11 @@ public class Author implements Directory {
         this.lastName = lastName;
     }
 
-    protected String firstName;
+    private String firstName;
 
-    protected String middleName;
+    private String middleName;
 
-    protected String lastName;
+    private String lastName;
 
     public Integer getId() {
         return id;

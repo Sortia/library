@@ -1,15 +1,22 @@
 package com.example.sweater.repos.books;
 
+import com.example.sweater.domain.Book;
 import com.example.sweater.domain.books.State;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface StateRepo extends JpaRepository<State, Long> {
     Long deleteById(Integer id);
 
     State findById(Integer id);
+
+//    @Transactional
+//    @Query("select id, name from Book ")
+//    List <Book> findAll(String name, Integer id);
 
     @Transactional
     @Modifying
