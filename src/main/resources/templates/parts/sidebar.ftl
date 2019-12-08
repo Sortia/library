@@ -23,6 +23,7 @@
                 <a class="collapse-item" href="/directory/publishers">Publishers</a>
                 <a class="collapse-item" href="/directory/authors">Authors</a>
                 <a class="collapse-item" href="/directory/activities">Activities</a>
+                <a class="collapse-item" href="/directory/departments">Departments</a>
             </div>
         </div>
     </li>
