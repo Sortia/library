@@ -6,8 +6,7 @@
 
     <h2>Readers</h2>
 
-    <button class="btn btn-primary mb-3 reader_edit" data-toggle="modal" data-target="#editModal" data-id="0">Create
-    </button>
+    <button class="btn btn-primary mb-3 reader_edit" data-toggle="modal" data-target="#editModal" data-id="0">Create</button>
 
     <table data-toggle="table">
         <thead>

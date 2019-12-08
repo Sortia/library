@@ -23,12 +23,17 @@
                 <a class="collapse-item" href="/directory/publishers">Publishers</a>
                 <a class="collapse-item" href="/directory/authors">Authors</a>
                 <a class="collapse-item" href="/directory/activities">Activities</a>
-                <a class="collapse-item" href="/directory/states">States</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="/books">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Books</span></a>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link" href="/readers">
             <i class="fas fa-fw fa-table"></i>

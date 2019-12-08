@@ -6,7 +6,7 @@ import com.example.sweater.domain.books.Directory;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "activities")
+@Table(name = "departments")
 public class Department extends AuditModel implements Directory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

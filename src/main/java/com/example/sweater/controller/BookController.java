@@ -1,5 +1,6 @@
 package com.example.sweater.controller;
 
+import com.example.sweater.domain.Book;
 import com.example.sweater.repos.BookRepo;
 import com.example.sweater.repos.books.*;
 import org.springframework.stereotype.Controller;
@@ -19,13 +20,20 @@ public class BookController {
     private final GenreRepo genreRepo;
     private final KeywordRepo keywordRepo;
     private final PublisherRepo publisherRepo;
-    private final StateRepo stateRepo;
     private final TypeRepo typeRepo;
     private final BookRepo bookRepo;
 
-    public BookController(ActivityRepo activityRepo, AuthorRepo authorRepo, DepartmentRepo departmentRepo,
-                          FormatRepo formatRepo, GenreRepo genreRepo, KeywordRepo keywordRepo,
-                          PublisherRepo publisherRepo, StateRepo stateRepo, TypeRepo typeRepo, BookRepo bookRepo) {
+    public BookController(
+        ActivityRepo activityRepo,
+        AuthorRepo authorRepo,
+        DepartmentRepo departmentRepo,
+        FormatRepo formatRepo,
+        GenreRepo genreRepo,
+        KeywordRepo keywordRepo,
+        PublisherRepo publisherRepo,
+        TypeRepo typeRepo,
+        BookRepo bookRepo
+    ) {
         this.activityRepo = activityRepo;
         this.authorRepo = authorRepo;
         this.departmentRepo = departmentRepo;
@@ -33,14 +41,13 @@ public class BookController {
         this.genreRepo = genreRepo;
         this.keywordRepo = keywordRepo;
         this.publisherRepo = publisherRepo;
-        this.stateRepo = stateRepo;
         this.typeRepo = typeRepo;
         this.bookRepo = bookRepo;
     }
 
     @GetMapping
     public String index(Model model) {
-        Collection qwe = bookRepo.getBooks(0,0,1,1,0,0);
+        Collection qwe = bookRepo.getBooks(0, 0, 1, 1, 0);
 
         model.addAttribute("activities", activityRepo.findAll());
         model.addAttribute("authors", authorRepo.findAll());
@@ -49,7 +56,6 @@ public class BookController {
         model.addAttribute("genres", genreRepo.findAll());
         model.addAttribute("keywords", keywordRepo.findAll());
         model.addAttribute("publishers", publisherRepo.findAll());
-        model.addAttribute("states", stateRepo.findAll());
         model.addAttribute("types", typeRepo.findAll());
 
         return "books";
@@ -69,16 +75,40 @@ public class BookController {
 //    }
 
     @ResponseBody
-    @PostMapping("store/{id}")
-    public String store(@PathVariable String id) {
-        return "";
-    }
+    @PostMapping("store")
+    public void store(
+            @RequestParam Integer activityId,
+            @RequestParam Integer authorId,
+            @RequestParam Integer formatId,
+            @RequestParam Integer genreId,
+            @RequestParam Integer keywordId,
+            @RequestParam Integer publisherId,
+            @RequestParam Integer typeId,
+            @RequestParam Integer departmentId,
+            @RequestParam String name,
+            @RequestParam Float cost,
+            @RequestParam String year,
+            @RequestParam Integer pages,
+            @RequestParam String annotation
+    ) {
+        Book book = new Book();
 
-    @ResponseBody
-    @GetMapping("delete/{id}")
-    public String delete(@PathVariable String id) {
-        return "";
-    }
+        book.setActivityId(activityRepo.findById(activityId));
+        book.setAuthorId(authorRepo.findById(authorId));
+        book.setFormatId(formatRepo.findById(formatId));
+        book.setGenreId(genreRepo.findById(genreId));
+        book.setKeywordId(keywordRepo.findById(keywordId));
+        book.setPublisherId(publisherRepo.findById(publisherId));
+        book.setTypeId(typeRepo.findById(typeId));
+        book.setDepartmentId(departmentRepo.findById(departmentId));
 
+        book.setName(name);
+        book.setCost(cost);
+        book.setPublishYear(year);
+        book.setNumberPages(pages);
+        book.setAnnotation(annotation);
+
+        bookRepo.save(book);
+    }
 
 }
